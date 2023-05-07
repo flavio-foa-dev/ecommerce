@@ -1,0 +1,144 @@
+.cart_container{
+  background-color: #141419;
+  padding: 2rem 14rem;
+}
+
+table img {
+  width: 5rem
+}
+
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+table tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: .35em;
+}
+
+table th,
+table td {
+  padding: .625em;
+  text-align: center;
+}
+
+table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: 2em;
+}
+
+.btn_finalizar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #7159C1;
+  color :aliceblue;
+  border: none;
+  font-weight: bold;
+}
+
+.td_price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .2rem;
+  height: 5rem
+}
+
+.total_price {
+  font-weight: bolder;
+}
+
+.product_total{
+  font-size: 13px;
+  color: rgb(111, 107, 114);
+  font-weight: bold;
+}
+
+@media screen and (max-width: 910px) {
+  .cart_container{
+    background-color: #141419;
+    padding: 2rem 8rem;
+  }
+  .btn_finalizar{
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 710px) {
+  .cart_container{
+    background-color: #141419;
+    padding: 2rem 5rem;
+  }
+
+  .btn_finalizar{
+    font-size: 6px;
+    padding: auto;
+  }
+
+  table img {
+    width: 4rem
+  }
+
+  .descricao {
+    font-size: 12px
+  }
+
+  .td_price {
+    display: flex;
+    flex-direction: column;
+  }
+
+  table th {
+    font-size: .74em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    padding: 1em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .cart_container{
+    background-color: #141419;
+    padding: 1rem 2rem;
+
+  }
+  .btn_finalizar{
+    font-size: 6px;
+  }
+
+  table img {
+    width: 3rem
+  }
+
+  .descricao {
+    font-size: 8px
+  }
+
+  table th {
+    font-size: .64em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    padding: 0.4em;
+  }
+
+  .product_total{
+    font-size: 12px;
+  }
+
+  .total_price {
+    font-weight: bolder;
+    font-size: 12px
+  }
+}

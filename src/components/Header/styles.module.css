@@ -1,0 +1,37 @@
+.container_header{
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: #fff;
+  background-color: var(--Black-prymary);
+  align-items: center;
+  padding-top: 2rem ;
+}
+
+.header_image {
+  margin-left: 2rem ;
+}
+
+.cart{
+  display: flex;
+  flex-direction: column;
+  margin-right: 3rem;
+}
+
+.cart span {
+  color:#797575
+}
+
+.heade_link{
+  color:aliceblue;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 470px)  {
+  .header-image {
+    width: 13rem;
+  }
+}
