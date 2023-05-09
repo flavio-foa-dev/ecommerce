@@ -1,0 +1,132 @@
+
+.card {
+  padding: 1rem;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  background-color: white;
+  border: 1px solid black;
+  height:23rem;
+  gap: 4px;
+  border-radius: 10px;
+}
+
+.card_img {
+  width: 15rem
+}
+
+.card_title{
+  height: 25px;
+}
+
+.card_span {
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: start;
+  width: 100%;
+}
+
+.card_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3px;
+  width: 100%;
+  padding: 10px 0px;
+  border-radius: 5px;
+  background-color: #7159C1;
+  color :aliceblue;
+  border: none;
+  font-weight: bold;
+  display: flex;
+  gap: 10px;
+}
+
+.card_button:hover{
+  background-color: #5137a7;
+
+}
+
+
+@media screen and (max-width: 1300px)  {
+  .card_img {
+    width: 12rem
+  }
+  .card{
+    width: 30%;
+    height:27rem;
+  }
+
+.card_button {
+  margin-top: 2rem;
+ }
+}
+
+@media screen and (max-width: 880px)  {
+  .card_img {
+    width: 9rem
+  }
+  .card{
+    width: 30%;
+    height:21rem;
+  }
+}
+
+
+@media screen and (max-width: 700px)  {
+  .card_img {
+    width: 6rem
+  }
+  .card{
+    width: 30%;
+    height:19rem;
+  }
+}
+
+@media screen and (max-width: 550px)  {
+  .card_img {
+    width: 9rem
+  }
+  .card{
+    width: 40%;
+    height:20rem;
+  }
+
+}
+
+
+@media screen and (max-width: 510px)  {
+  .card_img {
+    width: 8rem
+  }
+  .card{
+    width: 35%;
+    height:20rem;
+  }
+
+}
+
+@media screen and (max-width: 410px)  {
+  .card_img {
+    width: 6rem
+  }
+  .card{
+    width: 35%;
+    height:18rem;
+  }
+
+}
+
+@media screen and (max-width: 330px)  {
+  .card_img {
+    width: 7rem
+  }
+  .card{
+    width: 60%;
+    height:18rem;
+  }
+
+}
+
