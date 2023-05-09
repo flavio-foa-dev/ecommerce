@@ -1,0 +1,13 @@
+.products {
+  background-color: var(--Black-prymary);
+  text-align: center;
+  display: flex;
+  padding: 2rem 7rem;
+  width: 100wh;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  height: 100%;
+  flex-wrap: wrap;
+
+}

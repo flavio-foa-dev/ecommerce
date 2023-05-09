@@ -1,15 +1,22 @@
-import { useContext } from "react"
-import {ContextUsers} from '../context/users'
+
+import { useState } from "react"
+import LoginComponent from "../components/Login/LoginComponent"
+import Cadastrar from "../components/Cadastro/Cadastro"
 
 export default function Login() {
-  const {nome, setNome} = useContext(ContextUsers)
+  const [cadastro, setCadastrar] = useState("login")
+
+  function getFormCad(){
+    setCadastrar("cadastrar")
+  }
 
   return (
-    <div>
-      <h1>Login {nome}</h1>
-      <button onClick={() => setNome(" Figuereedo Torres")}>Nome</button>
+    <>
+      { cadastro === "login" && <LoginComponent fnCadastar={getFormCad}/> || <Cadastrar />}
 
-    </div>
+
+        {cadastro}
+    </>
 
   )
 }

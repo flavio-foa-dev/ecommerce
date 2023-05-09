@@ -1,20 +1,17 @@
-import { useContext } from "react"
-import {ContextUsers} from '../context/users'
+
+import Header from "../components/Header/Header"
 import ListProducts from "../components/ListProduts/ListProducts"
 
 
 
 
 function Home() {
-  const {nome, setNome} = useContext(ContextUsers)
+
   return (
     <>
+      <Header />
       <ListProducts />
-      <p className="">
-        Click on the Vite and React logos to learn more
-        {nome}
-        <button onClick={() => setNome(" Figuereedo Torres")}>Nome</button>
-      </p>
+
     </>
   )
 }
