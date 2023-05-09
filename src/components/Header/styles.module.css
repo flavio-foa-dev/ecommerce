@@ -13,21 +13,30 @@
 
 }
 
-.header_image {
+.header_logo {
   margin-left: 2rem ;
 }
 
 .cart{
   display: flex;
   flex-direction: column;
+  gap: 3px;
   margin-right: 3rem;
 }
 
-.cart span {
-  color:#797575
+.item_cart {
+  position: absolute;
+  color:#131212;
+  padding: 0 4px ;
+  background-color: rgb(21, 240, 13);
+  border-radius:  9999px;
+  margin-left: 1rem;
+  margin-top: -0.5rem;
+
+
 }
 
-.heade_link{
+.header_link{
   color:aliceblue;
   text-decoration: none;
 }
