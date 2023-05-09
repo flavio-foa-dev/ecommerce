@@ -1,7 +1,6 @@
 import { ReactNode, createContext, useState } from 'react';
 import {v4 as uuid} from 'uuid'
 
-
 export const ContextUsers = createContext<object| undefined>(undefined)
 ContextUsers.displayName = "Users"
 
@@ -19,9 +18,8 @@ const users = [
   }
 ]
 
-
-
 export default function  ProviderUsers({children}: Children) {
+
   const [user, setUser] = useState(
     {
       id: uuid(),
@@ -42,9 +40,8 @@ export default function  ProviderUsers({children}: Children) {
 
   const createUser = (e:any) => {
     e.preventDefault();
-
     if (user.adress && user.email && user.fullName && user.password) {
-      users.push(user,)
+      users.push(user)
     }
   };
 
