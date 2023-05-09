@@ -1,7 +1,7 @@
 .form_container {
   height: 100vh;
   background-color: var(--Black-prymary);
-  padding: 2px;
+  padding: 0.1rem 0 4rem 0;
   color: white;
   display: flex;
   flex-direction: column;
@@ -21,18 +21,16 @@
 
 .form {
   width: 25%;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   border: #fff 1px solid;
   padding: 2.5rem;
   border-radius: 0.375rem;
-
 }
 
 .input_group {
   margin-top: 0.25rem;
   font-size: 0.875rem;
   line-height: 1.25rem;
-
 }
 
 .input_group label {
@@ -86,6 +84,14 @@
   font-weight: 600;
 }
 
+.btn_cad {
+  background-color: rgba(167, 139, 250, 1);
+  border: none;
+  margin-left: 12px;
+  padding: 12px 18px;
+  border-radius: 0.375rem;
+}
+
 .social_message {
   display: flex;
   align-items: center;
@@ -136,23 +142,17 @@
 @media (max-width: 1000px) {
   .form {
     width: 35%;
-
-
   }
 }
 
 @media (max-width: 800px) {
   .form {
     width: 45%;
-
-
   }
 }
 
 @media (max-width: 650px) {
   .form {
     width: 55%;
-
-
   }
 }

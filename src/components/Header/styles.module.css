@@ -9,6 +9,8 @@
   background-color: var(--Black-prymary);
   align-items: center;
   padding-top: 2rem ;
+  position: fixed;
+
 }
 
 .header_image {

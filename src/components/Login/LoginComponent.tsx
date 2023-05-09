@@ -42,7 +42,7 @@ export default function LoginComponents(props:any) {
 		</button>
 	</div>
 	<p className="signup">Don't have an account?
-		<button onClick={()=> props.fnCadastar("cadastrar")}>Sign up</button>
+		<button className={styles.btn_cad} onClick={()=> props.fnCadastar("cadastrar")}>Cadastrar</button>
 	</p>
 </div>
   )
