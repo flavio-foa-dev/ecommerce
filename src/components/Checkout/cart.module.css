@@ -35,6 +35,26 @@ table th {
   padding: 2em;
 }
 
+.table_qtd{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height:85px;
+  gap:20px
+}
+
+.btn_plus_minus{
+  border-radius: 9999px;
+  background-color: #efeff1;
+  padding:10px;
+  cursor:pointer
+}
+
+.btn_plus_minus:hover{
+  background-color: #d9d9df;
+
+}
+
 .btn_finalizar{
   display: flex;
   align-items: center;

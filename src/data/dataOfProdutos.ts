@@ -45,7 +45,8 @@ export const shoes = [
     price: 169.90,
     stock: 10,
     favorite: false,
-    like: 15
+    like: 15,
+    qtd: 0
   },
   {
     id: uuid(),

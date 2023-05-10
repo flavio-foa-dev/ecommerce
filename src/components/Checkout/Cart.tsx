@@ -1,20 +1,14 @@
 import { useContext } from "react"
 import { CartContext } from "../../context/Cart"
 import styles from "./cart.module.css"
+import { Minus, Plus } from "@phosphor-icons/react"
 
-const cartProduct = [{
-  img:"www",
-  id:1,
-  description:"muito confortavel",
-  price:100,
-  qtd:10
 
-}]
 
 export default function Cart() {
   const {cart} = useContext<any>(CartContext)
 
-  const ValueTotal = cartProduct.reduce((acc, item) => acc + item.price * item.qtd, 0)
+  const ValueTotal = cart.reduce((acc:number, item:any) => acc + item.price * item.qtd, 0)
   return (
     <>
       <div className={styles.cart_container}>
@@ -33,8 +27,12 @@ export default function Cart() {
               <tr>
                 <td><img src={item.img} alt={item.description}/> </td>
                 <td><div className={styles.descricao}>{item.description}</div> <div className={styles.descricao}>{item.price}</div> </td>
-                <td >{item.qtd}</td>
-                <td >{1 * item.price}</td>
+                <td className={styles.table_qtd}>
+                  <Plus className={styles.btn_plus_minus} size={18} color="green" />
+                  {item.qtd}
+                  <Minus className={styles.btn_plus_minus} size={18} color="red" />
+                </td>
+                <td >R$ {(item.qtd * item.price).toFixed(2)}</td>
               </tr>
               )
             })}
@@ -44,7 +42,7 @@ export default function Cart() {
               <th scope="row"><button className={styles.btn_finalizar}>FINALIZAR PEDIDO</button></th>
               <td></td>
               <td></td>
-              <td className={styles.td_price}><div className={styles.product_total}>TOTAL</div> <div className={styles.total_price}> R$ {ValueTotal}</div></td>
+              <td className={styles.td_price}><div className={styles.product_total}>TOTAL</div> <div className={styles.total_price}> R$ {ValueTotal.toFixed(2)}</div></td>
             </tr>
           </tfoot>
         </table>
