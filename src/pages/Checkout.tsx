@@ -5,6 +5,7 @@ export default function Checkout() {
   return (
     <>
       <Header />
+      <br /><br /><br /><br />
       <Cart />
     </>
   )
