@@ -1,4 +1,7 @@
+import { useContext } from "react"
+import { CartContext } from "../../context/Cart"
 import styles from "./cart.module.css"
+
 const cartProduct = [{
   img:"www",
   id:1,
@@ -9,6 +12,7 @@ const cartProduct = [{
 }]
 
 export default function Cart() {
+  const {cart} = useContext<any>(CartContext)
 
   const ValueTotal = cartProduct.reduce((acc, item) => acc + item.price * item.qtd, 0)
   return (
@@ -24,13 +28,13 @@ export default function Cart() {
             </tr>
           </thead>
           <tbody>
-            {cartProduct.map((item) => {
+            {cart.map((item:any) => {
               return(
               <tr>
                 <td><img src={item.img} alt={item.description}/> </td>
                 <td><div className={styles.descricao}>{item.description}</div> <div className={styles.descricao}>{item.price}</div> </td>
                 <td >{item.qtd}</td>
-                <td >{item.qtd * item.price}</td>
+                <td >{1 * item.price}</td>
               </tr>
               )
             })}
