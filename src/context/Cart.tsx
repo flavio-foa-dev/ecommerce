@@ -28,16 +28,29 @@ async function addcart(id:any){
       }
       return item
     }))
-
-
   }
-
-  console.log(id)
-  console.log(cart)
-
 }
 
-const value = { cart, setCart, addcart, cartLength }
+
+function handleCartQtd(id:number, quantity:number){
+
+  const produto = cart.find(item => item.id === id)
+  const hasQuantity = produto.qtd === 1
+  if(hasQuantity && quantity === -1){
+    return setCart(cart.filter((item)=> item.id !== id))
+  }
+
+  setCart(cart.map((item)=> {
+    if (item.id === id){
+      if(item.qtd > 0){
+        item.qtd += quantity
+      }
+    }
+    return item
+  }))
+}
+
+const value = { cart, setCart, addcart, handleCartQtd, cartLength }
   return(
     <CartContext.Provider value={value}>
       {children}
