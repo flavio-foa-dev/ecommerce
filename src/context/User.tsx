@@ -1,4 +1,5 @@
 import { ReactNode, createContext, useState } from 'react';
+import { redirect } from 'react-router-dom';
 import {v4 as uuid} from 'uuid'
 
 export const ContextUsers = createContext<object| undefined>(undefined)
@@ -19,6 +20,9 @@ const users = [
 ]
 
 export default function  ProviderUsers({children}: Children) {
+  const [userNotFound, setUserNotFoud] = useState(false)
+  const [cadastro, setCadastrar] = useState("login")
+
 
   const [user, setUser] = useState(
     {
@@ -29,6 +33,29 @@ export default function  ProviderUsers({children}: Children) {
       adress: "",
     }
   )
+
+  function hendleFormCadastro(action: string){
+    setCadastrar(action)
+  }
+
+
+  function validationUser(e:React.MouseEvent<HTMLButtonElement, MouseEvent>) {
+    e.preventDefault();
+    const userExist = users.find((item : any) => (
+      item.email === user.email && item.password === user.password))
+
+    console.log(userExist,"usuario existe no cadastro")
+    !userExist ? setUserNotFoud(true) : setUserNotFoud(false)
+
+    if(userExist){
+      console.log(" eu existo")
+      redirect("/");
+
+    }
+
+  }
+
+
 
   const handleChange = (e:any) => {
     const { name, value } = e.target;
@@ -43,9 +70,22 @@ export default function  ProviderUsers({children}: Children) {
     if (user.adress && user.email && user.fullName && user.password) {
       users.push(user)
     }
+    setCadastrar("login")
+    console.log(users, ' todod os users')
   };
 
-  const value = {user, setUser, handleChange, createUser }
+
+
+  const value = {
+    user,
+    setUser,
+    handleChange,
+    createUser,
+    validationUser,
+    userNotFound,
+    cadastro,
+    hendleFormCadastro
+   }
   return (
     <ContextUsers.Provider value={value}>
       {children}

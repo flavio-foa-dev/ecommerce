@@ -50,7 +50,11 @@ function handleCartQtd(id:number, quantity:number){
   }))
 }
 
-const value = { cart, setCart, addcart, handleCartQtd, cartLength }
+const ValueTotal = cart.reduce((acc:number, item:any) => acc + item.price * item.qtd, 0)
+
+
+
+const value = { cart, setCart, addcart, handleCartQtd, cartLength, ValueTotal }
   return(
     <CartContext.Provider value={value}>
       {children}

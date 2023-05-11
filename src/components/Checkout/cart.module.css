@@ -66,6 +66,13 @@ table th {
   color :aliceblue;
   border: none;
   font-weight: bold;
+  cursor: pointer;
+
+}
+
+.btn_finalizar:hover {
+  background-color: #5137a7
+
 
 }
 
