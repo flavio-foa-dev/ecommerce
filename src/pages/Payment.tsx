@@ -1,7 +1,14 @@
+import Header from "../components/Header/Header";
+import Pay from "../components/Payment/Payment";
+import Rating from "../components/Rating/Rating";
 
 
 export default function Payment() {
   return (
-    <div>payment</div>
+    <>
+      <Header/>
+      <Pay/>
+      <Rating />
+    </>
   )
 }

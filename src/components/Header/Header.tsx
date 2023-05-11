@@ -17,7 +17,18 @@ export default function Header() {
         </Link>
 
         <div className={styles.cart}>
-          <Link to='/checkout' className={styles.header_link}><ShoppingCart size={25} color="#fff" />Meu carrinho</Link >
+          <Link
+            to='/checkout'
+            className={styles.header_link}
+          >
+            <ShoppingCart
+              size={25}
+              color="#fff"
+            />
+            <span className={styles.spancart}>
+              Meu carrinho
+            </span>
+          </Link >
           {cartLength>0 && <span className={styles.item_cart}> {cartLength }</span>}
         </div>
 
