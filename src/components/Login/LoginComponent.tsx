@@ -1,22 +1,40 @@
+import { useContext } from 'react'
 import styles from './LoginComponent.module.css'
+import { ContextUsers } from '../../context/User'
+import { EnvelopeSimple, Key, Password } from '@phosphor-icons/react'
 
 export default function LoginComponents(props:any) {
+	const {validationUser, handleChange, userNotFound} = useContext<any>(ContextUsers)
   return (
     <div className={styles.form_container}>
 			<p className={styles.title}>Login</p>
-			<form className={styles.form}>
+			<form className={styles.form} onSubmit={validationUser}>
 				<div className={styles.input_group}>
-					<label htmlFor="username">Username</label>
-					<input type="text" name="username" id="username" placeholder="" />
+				<h4 className={!userNotFound ? styles.user_notFoundFalse : styles.user_notFoundTrue}>Usuario nao encontrado cadastre -se</h4>
+
+					<label className={styles.input_group_label} htmlFor="email"><EnvelopeSimple size={18} color="#fff" />E-mail</label>
+					<input
+						type="text"
+						name="email"
+						id="email"
+						placeholder="digite o seu email"
+						onChange={handleChange}
+					/>
 				</div>
 				<div className={styles.input_group}>
-					<label htmlFor="password">Password</label>
-					<input type="password" name="password" id="password" placeholder=""/>
+					<label className={styles.input_group_label} htmlFor="password"><Key size={18} color="#fff" />Password</label>
+					<input
+						type="password"
+						name="password"
+						id="password"
+						placeholder="digite sua senha"
+						onChange={handleChange}
+					/>
 					<div className={styles.forgot}>
 						<a rel="noopener noreferrer" href="#">Forgot Password ?</a>
 					</div>
 				</div>
-				<button className={styles.sign}>Sign in</button>
+				<button className={styles.sign} onClick={(e)=> validationUser(e)}>Sign in</button>
 			</form>
 
 	<div className={styles.social_message}>
@@ -42,7 +60,11 @@ export default function LoginComponents(props:any) {
 		</button>
 	</div>
 	<p className="signup">Don't have an account?
-		<button className={styles.btn_cad} onClick={()=> props.fnCadastar("cadastrar")}>Cadastrar</button>
+		<button
+			className={styles.btn_cad}
+			onClick={()=> props.fnCadastar("cadastrar")}
+		>
+		Cadastrar</button>
 	</p>
 </div>
   )

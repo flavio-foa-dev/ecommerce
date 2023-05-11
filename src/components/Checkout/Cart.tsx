@@ -8,10 +8,8 @@ import { Link } from "react-router-dom"
 
 
 export default function Cart() {
-  const {cart, handleCartQtd, cartLength} = useContext<any>(CartContext)
+  const {cart, handleCartQtd, cartLength, ValueTotal} = useContext<any>(CartContext)
 
-
-  const ValueTotal = cart.reduce((acc:number, item:any) => acc + item.price * item.qtd, 0)
   return (
     <>
       <div className={styles.cart_container}>
@@ -44,7 +42,7 @@ export default function Cart() {
             <tr>
               <th scope="row" >
                 {cartLength ?
-                <Link to="/payment" style={{textDecoration: 'none'}}>
+                <Link to="/login" style={{textDecoration: 'none'}}>
                   <button className={styles.btn_finalizar} >
                     FINALIZAR PEDIDO
                   </button>

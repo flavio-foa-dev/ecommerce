@@ -7,6 +7,7 @@ export default function Payment() {
   return (
     <>
       <Header/>
+      <br /><br /><br /><br />
       <Pay/>
       <Rating />
     </>

@@ -1,6 +1,7 @@
 import { useContext } from 'react'
 import styles from './Cadastro.module.css'
 import { ContextUsers } from '../../context/User'
+import { EnvelopeSimple, House, Key, User } from '@phosphor-icons/react'
 
 
 export default function Cadastrar() {
@@ -8,10 +9,10 @@ export default function Cadastrar() {
   return (
     <div className={styles.form_container}>
 			<p className={styles.title}>Cadastrar</p>
-			<form className={styles.form} onSubmit={createUser}>
+			<form className={styles.form} onSubmit={createUser} >
 
 				<div className={styles.input_group}>
-					<label htmlFor="fullName">Username</label>
+					<label className={styles.input_group_label} htmlFor="fullName"><User size={18} color="#fff" />Nome</label>
 					<input
 						type="text"
 						name="fullName"
@@ -23,7 +24,7 @@ export default function Cadastrar() {
 				</div>
 
 				<div className={styles.input_group}>
-					<label htmlFor="email">Email</label>
+					<label className={styles.input_group_label} htmlFor="email"><EnvelopeSimple size={18} color="#fff" />Email</label>
 					<input
 						type="text"
 						name="email"
@@ -35,7 +36,7 @@ export default function Cadastrar() {
 				</div>
 
 				<div className={styles.input_group}>
-					<label htmlFor="adress">Adress</label>
+					<label className={styles.input_group_label} htmlFor="adress"><House size={18} color="#fff" />Endereco</label>
 					<input
 						type="text"
 						name="adress"
@@ -47,7 +48,7 @@ export default function Cadastrar() {
 				</div>
 
 				<div className={styles.input_group}>
-					<label htmlFor="password">Password</label>
+					<label className={styles.input_group_label} htmlFor="password"><Key size={18} color="#fff" />Senha</label>
 					<input
 						type="password"
 						name="password"
@@ -57,6 +58,7 @@ export default function Cadastrar() {
 						placeholder="Digite sua senha"/>
 				 </div>
 				 <button
+
 				   className={styles.cad}
 					 disabled={!user.adress && !user.email && !user.fullName && !user.password}
 
