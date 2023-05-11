@@ -1,11 +1,14 @@
 :root {
   /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
-  --Black-prymary:  #141419;
+  --Black-primary:  #141419;
+  --Branco-primary: #ffffff;
+  --Roxo-primary: #7159C1;
 }
 
 body {
   margin: 0;
   padding: 0;
+  background-color: var(--Black-primary);
 
 
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

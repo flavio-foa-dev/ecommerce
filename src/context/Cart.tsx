@@ -58,7 +58,7 @@ const value = { cart, setCart, addcart, handleCartQtd, cartLength }
   )
 }
 
-export const useCartContext = ()=> {
+export const useCartContext = () => {
   const {cart, setCart} = useContext<any>(CartContext)
 
   return {

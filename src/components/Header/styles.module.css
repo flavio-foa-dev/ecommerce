@@ -5,12 +5,11 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  color: #fff;
-  background-color: var(--Black-prymary);
+  color: var(--Branco-primary);
+  background-color: var(--Black-primary);
   align-items: center;
   padding-top: 2rem ;
   position: fixed;
-
 }
 
 .header_logo {
@@ -32,8 +31,6 @@
   border-radius:  9999px;
   margin-left: 1rem;
   margin-top: -0.5rem;
-
-
 }
 
 .header_link{
@@ -41,8 +38,11 @@
   text-decoration: none;
 }
 
-@media screen and (max-width: 470px)  {
-  .header-image {
-    width: 13rem;
+@media screen and (max-width: 490px) {
+  .header_logo {
+    width: 15rem;
+  }
+  .spancart{
+    display: none;
   }
 }
