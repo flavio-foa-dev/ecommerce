@@ -1,10 +1,22 @@
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import styles from './LoginComponent.module.css'
 import { ContextUsers } from '../../context/User'
-import { EnvelopeSimple, Key, Password } from '@phosphor-icons/react'
+import { EnvelopeSimple, Key } from '@phosphor-icons/react'
+import { useNavigate } from 'react-router-dom'
 
 export default function LoginComponents(props:any) {
-	const {validationUser, handleChange, userNotFound} = useContext<any>(ContextUsers)
+	const {validationUser, handleChange, userNotFound, userExist } = useContext<any>(ContextUsers)
+
+	const navigate = useNavigate();
+
+	useEffect(()=> {
+    console.log(userExist, "userExiste_eseEffects")
+    if(userExist) {
+      console.log("entrei useEffects")
+      navigate("/payment");
+    }
+  },[userExist])
+
   return (
     <div className={styles.form_container}>
 			<p className={styles.title}>Login</p>
@@ -22,7 +34,13 @@ export default function LoginComponents(props:any) {
 					/>
 				</div>
 				<div className={styles.input_group}>
-					<label className={styles.input_group_label} htmlFor="password"><Key size={18} color="#fff" />Password</label>
+					<label
+						className={styles.input_group_label}
+						htmlFor="password"
+					>
+						<Key size={18} color="#fff" />
+						Password
+					</label>
 					<input
 						type="password"
 						name="password"
