@@ -38,7 +38,7 @@ export default function Pay() {
             </select>
           </li>
           <li className={styles.group_li}>
-            <span>Total R$ {ValueTotal}</span>
+            <span>Total R$ {ValueTotal.toFixed(2)}</span>
           </li>
           <li className={styles.group_li}>
             <span>
