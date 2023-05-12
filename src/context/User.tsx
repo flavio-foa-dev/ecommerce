@@ -14,7 +14,7 @@ const users = [
     id: uuid(),
     fullName: "Flavio Andrade",
     email: "foa@foa.com",
-    password: "123456",
+    password: "101010",
     adress: "Rua new city 07 UK",
   }
 ]
