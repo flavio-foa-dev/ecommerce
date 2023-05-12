@@ -14,6 +14,8 @@ export default function Cadastrar() {
 				<div className={styles.input_group}>
 					<label className={styles.input_group_label} htmlFor="fullName"><User size={18} color="#fff" />Nome</label>
 					<input
+					  autoComplete="off"
+						autoFocus
 						type="text"
 						name="fullName"
 						id="fullName"
@@ -26,6 +28,7 @@ export default function Cadastrar() {
 				<div className={styles.input_group}>
 					<label className={styles.input_group_label} htmlFor="email"><EnvelopeSimple size={18} color="#fff" />Email</label>
 					<input
+					  autoComplete="off"
 						type="text"
 						name="email"
 						id="email"
@@ -39,6 +42,7 @@ export default function Cadastrar() {
 					<label className={styles.input_group_label} htmlFor="adress"><House size={18} color="#fff" />Endereco</label>
 					<input
 						type="text"
+					  autoComplete="off"
 						name="adress"
 						id="adress"
 						value={user.adress}
@@ -51,6 +55,7 @@ export default function Cadastrar() {
 					<label className={styles.input_group_label} htmlFor="password"><Key size={18} color="#fff" />Senha</label>
 					<input
 						type="password"
+					  autoComplete="off"
 						name="password"
 						id="password"
 						onChange={handleChange}
