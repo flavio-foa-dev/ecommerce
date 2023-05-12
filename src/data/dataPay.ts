@@ -1,22 +1,22 @@
 export const typePay = [
   {
     id:1,
-    type: "boleto",
+    type: "Boleto",
     juros: 25
   },
   {
     id:2,
-    type: "cartao",
+    type: "Cartao",
     juros: 15
   },
   {
     id: 3,
-    type: "pix",
+    type: "Pix",
     juros: 1
   },
   {
     id: 4,
-    type: "cash",
+    type: "Cash",
     juros: 1
   }
 ]

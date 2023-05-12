@@ -1,6 +1,7 @@
 .cart_container{
   background-color: #141419;
   padding: 2rem 14rem;
+  min-height: 70vh
 }
 
 table img {

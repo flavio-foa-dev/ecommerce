@@ -1,4 +1,5 @@
 import Cart from "../components/Checkout/Cart";
+import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
 
 export default function Checkout() {
@@ -7,6 +8,7 @@ export default function Checkout() {
       <Header />
       <br /><br /><br /><br />
       <Cart />
+      <Footer/>
     </>
   )
 }

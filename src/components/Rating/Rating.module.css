@@ -1,10 +1,10 @@
 .rating:not(:checked) > input {
-  position: absolute;
+  /* position: absolute; */
   appearance: none;
 }
 
 .rating:not(:checked) > label {
-  float: right;
+  /* float: right; */
   cursor: pointer;
   font-size: 50px;
   color: #666;
@@ -30,6 +30,3 @@
 .rating > input:checked ~ label {
   color: #ffa723;
 }
-
-
-

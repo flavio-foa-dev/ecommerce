@@ -4,6 +4,8 @@
   padding: 0.1rem;
   display: flex;
   justify-content: center;
+  bottom: 0;
+
 }
 
 @media screen and (max-width: 450px) {

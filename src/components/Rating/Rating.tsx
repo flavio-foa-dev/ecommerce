@@ -7,7 +7,7 @@ export default function Rating() {
       <label htmlFor="star5" title="text"></label>
       <input type="radio" id="star4" name="rate" value="4"/>
       <label htmlFor="star4" title="text"></label>
-      <input checked={false} type="radio" id="star3" name="rate" value="3"/>
+      <input type="radio" id="star3" name="rate" value="3"/>
       <label htmlFor="star3" title="text"></label>
       <input type="radio" id="star2" name="rate" value="2"/>
       <label htmlFor="star2" title="text"></label>
@@ -16,10 +16,3 @@ export default function Rating() {
     </div>
   )
 }
-
-
-
-
-
-
-

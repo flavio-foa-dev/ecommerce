@@ -8,7 +8,7 @@ type Children = {
 }
 
 export function  ProviderPayment ({children}:Children) {
-  const [pay, setPay] = useState(typePay[3])
+  const [pay, setPay] = useState(typePay)
 
   const value = {pay, setPay}
   return (
