@@ -38,10 +38,12 @@
   display: flex;
   gap: 0.4rem;
   padding: 0.2rem 0.3rem;
-
-
   color: rgba(156, 163, 175, 1);
   margin-bottom: 4px;
+}
+
+.input_group_eyes{
+  margin-left: 63%;
 }
 
 .input_group input {
@@ -166,5 +168,11 @@
 @media (max-width: 650px) {
   .form {
     width: 55%;
+  }
+}
+
+@media (max-width: 450px) {
+  .input_group_eyes{
+    margin-left: 53%;
   }
 }

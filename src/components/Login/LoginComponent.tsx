@@ -1,10 +1,11 @@
-import { useContext, useEffect } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import styles from './LoginComponent.module.css'
 import { ContextUsers } from '../../context/User'
-import { EnvelopeSimple, Key } from '@phosphor-icons/react'
+import { EnvelopeSimple, Eye, EyeSlash, Key } from '@phosphor-icons/react'
 import { useNavigate } from 'react-router-dom'
 
 export default function LoginComponents(props:any) {
+	const [showPassword, setShowPassword] = useState(false)
 	const {validationUser, handleChange, userNotFound, userExist } = useContext<any>(ContextUsers)
 
 	const navigate = useNavigate();
@@ -16,6 +17,10 @@ export default function LoginComponents(props:any) {
       navigate("/payment");
     }
   },[userExist])
+
+	const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
 
   return (
     <div className={styles.form_container}>
@@ -40,9 +45,14 @@ export default function LoginComponents(props:any) {
 					>
 						<Key size={18} color="#fff" />
 						Password
+						<div className={styles.input_group_eyes}>
+							{showPassword ?
+							<EyeSlash size={18} color="#fff" onClick={togglePasswordVisibility}/>
+							: <Eye size={18} color="#fff" onClick={togglePasswordVisibility}/>}
+						</div>
 					</label>
 					<input
-						type="password"
+						type={showPassword ? "text" : "password"}
 						name="password"
 						id="password"
 						placeholder="digite sua senha"

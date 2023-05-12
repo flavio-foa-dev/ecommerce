@@ -3,7 +3,7 @@ import {shoes} from '../../data/dataOfProdutos'
 import styles from "./Listproduct.module.css"
 import Card from '../Card/Card'
 
-const data = shoes.reverse().slice(0, 30)
+const data = shoes.reverse().slice(0, 12)
 
 export default function ListProducts() {
 
