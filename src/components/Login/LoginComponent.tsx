@@ -34,6 +34,7 @@ export default function LoginComponents(props:any) {
 						type="text"
 						name="email"
 						id="email"
+					  autoComplete="off"
 						placeholder="digite o seu email"
 						onChange={handleChange}
 					/>
@@ -56,6 +57,7 @@ export default function LoginComponents(props:any) {
 						name="password"
 						id="password"
 						placeholder="digite sua senha"
+					  autoComplete="off"
 						onChange={handleChange}
 					/>
 					<div className={styles.forgot}>

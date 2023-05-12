@@ -13,7 +13,6 @@ export default function Pay() {
     <div className={styles.pay_container}>
 
       <div className={styles.container_product}>
-
       {cart.map((item:any)=>{
         return <div key={item.id} className={styles.card_product}>
           <img src={item.img} alt={item.description} className={styles.card_img}/>
@@ -22,47 +21,39 @@ export default function Pay() {
             <span>R$ {item.price}  </span>
             <span>Qtd: {item.qtd}</span>
           </div>
-
         </div>
       })}
-
       </div>
 
-      <div>
-      <ul className={styles.container_ul}>
-        <li className={styles.group_li}>
-          <h2 className={styles.title}>Resumo da compra</h2>
-        </li>
-        <li className={styles.group_li}>
-          <select name="" id="" className={styles.group_li_select}>
-            <option value="">Forma de Pagamento</option>
-            {pay.map((item:any) => {
-              return <option key={item.id} value={item.type}>{item.type}</option>
-            })}
-          </select>
-        </li>
-        <li className={styles.group_li}>
-          <span>Total R$ {ValueTotal}</span>
-        </li>
-        <li className={styles.group_li}>
-          <span>
-            Nome: {userExist && userExist.fullName}
-          </span>
-        </li>
-        <li className={styles.group_li}>
-          <span>
-            Endereco: {userExist && userExist.adress }
-          </span>
-        </li>
-        <li className={styles.group_li_btn} onClick={()=> window.location.href = "/"}>
-            Finalizar comprar
-        </li>
-      </ul>
-
-
-
-      </div>
-
+        <ul className={styles.container_ul}>
+          <li className={styles.group_li}>
+            <h2 className={styles.title}>Resumo da compra</h2>
+          </li>
+          <li className={styles.group_li}>
+            <select name="" id="" className={styles.group_li_select}>
+              <option value="">Forma de Pagamento</option>
+              {pay.map((item:any) => {
+                return <option key={item.id} value={item.type}>{item.type}</option>
+              })}
+            </select>
+          </li>
+          <li className={styles.group_li}>
+            <span>Total R$ {ValueTotal}</span>
+          </li>
+          <li className={styles.group_li}>
+            <span>
+              Nome: {userExist && userExist.fullName}
+            </span>
+          </li>
+          <li className={styles.group_li}>
+            <span>
+              Endereco: {userExist && userExist.adress }
+            </span>
+          </li>
+          <li className={styles.group_li_btn} onClick={()=> window.location.href = "/"}>
+              Finalizar comprar
+          </li>
+        </ul>
     </div>
   )
 }
