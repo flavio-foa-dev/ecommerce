@@ -1,0 +1,13 @@
+.footer_container {
+  background-color:#222;
+  color: var(--Branco-primary);
+  padding: 0.1rem;
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 450px) {
+  .footer_container {
+    font-size: 0.8rem;
+  }
+}
