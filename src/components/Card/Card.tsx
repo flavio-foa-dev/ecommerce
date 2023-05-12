@@ -9,7 +9,7 @@ export default function Card({produt}:any) {
 
   return (
     <div className={styles.card}>
-    <img src={produt.img} alt="img" className={styles.card_img}/>
+      <img src={produt.img} alt="img" className={styles.card_img}/>
       <p className={styles.card_title}>{produt.description}</p>
       <span className={styles.card_span}>R$ {produt.price}</span>
       <button
